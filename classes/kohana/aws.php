@@ -123,7 +123,7 @@ class Kohana_AWS
 				'AWS_CLOUDFRONT_PRIVATE_KEY_PEM',
 				'AWS_ENABLE_EXTENSIONS',
 			);
-			$config = Kohana::config('amazon');
+			$config = Kohana::$config->load('amazon');
 			foreach ($config_keys as $key) {
 					define($key, $config->{$key});
 			}
